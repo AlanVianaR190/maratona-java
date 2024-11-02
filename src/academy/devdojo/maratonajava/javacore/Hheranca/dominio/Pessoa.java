@@ -11,6 +11,15 @@ public class Pessoa {
        que foi extendida independente da onde elas sejam importadas, ou pelo menos
        que estejam dentro do mesmo pacote */
 
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, String cpf){
+        this(nome);
+        this.cpf = cpf;
+    }
+
     public void imprime(){
         System.out.println("------------------------------------------------");
         System.out.println(this.nome);
@@ -41,4 +50,7 @@ public class Pessoa {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
+
+    /* dica: toda vez que adicionar um construtor na classe mae com parametros
+       obrigatoriamente e obrigado a alterar nas classes filhas */
 }
