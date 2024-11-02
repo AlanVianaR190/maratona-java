@@ -11,7 +11,20 @@ public class Pessoa {
        que foi extendida independente da onde elas sejam importadas, ou pelo menos
        que estejam dentro do mesmo pacote */
 
+    static {
+        System.out.println("Dentro do bloco de inicialização estatico de Pessoa");
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicialização NÃO estatico de Pessoa 1");
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicialização NÃO estatico de Pessoa 2");
+    }
+
     public Pessoa(String nome) {
+        System.out.println("Dentro do construtor Pessoa");
         this.nome = nome;
     }
 
@@ -19,6 +32,9 @@ public class Pessoa {
         this(nome);
         this.cpf = cpf;
     }
+
+    /* dica: toda vez que adicionar um construtor na classe mae com parametros
+       obrigatoriamente e obrigado a alterar nas classes filhas */
 
     public void imprime(){
         System.out.println("------------------------------------------------");
@@ -51,6 +67,4 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    /* dica: toda vez que adicionar um construtor na classe mae com parametros
-       obrigatoriamente e obrigado a alterar nas classes filhas */
 }

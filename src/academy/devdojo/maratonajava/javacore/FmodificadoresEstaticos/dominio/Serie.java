@@ -49,7 +49,7 @@ public class Serie {
         return episodios;
     }
 
-    /* 0 - Bloco de inicialização e executado apenas uma vez quando a JVM carregar classes
+    /* 0 - Bloco de inicialização estatico e executado apenas uma vez quando a JVM carregar classes
        1 - Alocando esaço em memoria para objeto
        2 - Cada atributo de classe e criado e inicializado com valores default ou que for passado
        3 - Bloco de inicialização e executado
