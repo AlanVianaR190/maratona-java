@@ -16,7 +16,6 @@ public class Serie {
                 '}';
     }
 
-
     /* o método toString() em Java é um método herdado da classe Object e é
        usado para retornar uma representação em formato string de um objeto, aqui ele
        esta sendo sobrescrito para fornecer uma melhor descrição
