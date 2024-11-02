@@ -2,9 +2,14 @@ package academy.devdojo.maratonajava.javacore.Hheranca.dominio;
 
 public class Pessoa {
 
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    // modificador de acesso: protected
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+
+    /* atributos de acesso protected da acesso direto a atribitos/variaveis da classe
+       que foi extendida independente da onde elas sejam importadas, ou pelo menos
+       que estejam dentro do mesmo pacote */
 
     public void imprime(){
         System.out.println("------------------------------------------------");

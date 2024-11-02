@@ -15,6 +15,12 @@ public class Funcionario extends Pessoa{
 
        O super. em um método sobrescrito chama a versão original do método na classe */
 
+    public void relatorioPagamento(){
+        System.out.println("Eu "+this.nome+" recebi o salario de $"+this.salario);
+    }
+
+    /* acesso ao atributo .nome se da por conta do acesso protected da classe herdada*/
+
     public double getSalario() {
         return salario;
     }
@@ -24,5 +30,6 @@ public class Funcionario extends Pessoa{
     }
 
     /* a partir do momento que uma classe se torna uma extensão de outra, ela
-       passa a herdar todos os seus atributos e metodos */
+       passa a herdar todos os seus atributos e metodos, não e possivel extender
+       multiplas classes */
 }
