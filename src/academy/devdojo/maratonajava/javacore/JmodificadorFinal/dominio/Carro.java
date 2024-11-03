@@ -27,6 +27,14 @@ public class Carro {
      significa que você não pode trocar esse objeto por outro depois que ele é criado.
      Mas você pode modificar as informações dentro desse objeto. */
 
+    public final void imprime(){
+        System.out.println(this.nome);
+    }
+
+    /* o modificado final em metodos proibe que este mesmo metodo seja
+       sobrescrito, e o modificdor final em classes proibe que este
+       seja herdado por outra classe */
+
     public String getNome() {
         return nome;
     }
