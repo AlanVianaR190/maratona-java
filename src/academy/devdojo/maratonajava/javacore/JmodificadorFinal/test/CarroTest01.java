@@ -10,5 +10,12 @@ public class CarroTest01 {
         System.out.println(Carro.VELOCIDADE_LIMITE);
 
         //System.out.println(carro.VELOCIDADE_LIMITE);
+
+        System.out.println(carro.COMPRADOR);
+
+        carro.COMPRADOR.setNome("John");
+
+        System.out.println(carro.COMPRADOR);
+
     }
 }

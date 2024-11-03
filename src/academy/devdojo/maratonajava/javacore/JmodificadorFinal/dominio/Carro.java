@@ -7,34 +7,25 @@ public class Carro {
     // constante
     public static final double VELOCIDADE_LIMITE = 250;
 
-    /* uma constante em Java e definida pela palavra final, e geralmente
+    /* uma constante em Java e definida pela palavra final, geralmente
        são definidas em letras maiusculas e nos espaços utiliza-se _(uderline),
        e são definidas com o acesso estatico
 
-       uma constante já tem um valor definido e não pode ser alterado */
+       uma constante deve ter um valor definido para ser inicializada
+       e não pode ser alterado
 
-
-
-    /* {
-        VELOCIDADE_LIMITE = 250;
-    } */
-
-
-
-    /* esta e uma formar de definir o valor de uma constante, atraves de um bloco
+       uma forma de definir o valor de uma constante e atraves de um bloco
        de inicialização, porem se a constante não for estatica o bloco de inicialização
-       tambem não deve ser estatico */
+       tambem não deve ser estatico
 
+       por ultimo ela tambem pode ser definida em um construtor, o IMPORTANTE e
+       que ela precisa ser inicializada/definida */
 
+    public final Comprador COMPRADOR = new Comprador();
 
-    /* public Carro() {
-        VELOCIDADE_LIMITE = 250;
-    } */
-
-
-
-    /* e por ultimo ela tambem pode ser definida em um construtor, o IMPORTANTE e
-       que ela precisa ser definida */
+    /* o COMPRADOR é uma constante que guarda um objeto da classe Comprador, isso
+     significa que você não pode trocar esse objeto por outro depois que ele é criado.
+     Mas você pode modificar as informações dentro desse objeto. */
 
     public String getNome() {
         return nome;
