@@ -12,6 +12,16 @@ public class CalculadoraImposto {
         System.out.println("Produto: "+produto.getNome());
         System.out.println("Valor: "+produto.getValor());
         System.out.println("Imposto a ser pago: $"+imposto);
+
+        if (produto instanceof Tomate){
+            Tomate tomate = (Tomate) produto;
+            System.out.println(tomate.getDataValidade());
+        }
+
+        /* o operador instanceof em Java é utilizado para verificar se um objeto
+           é uma instância de uma determinada classe ou de uma de suas subclasses. Ele
+           retorna um valor booleano (true ou false) */
+
     }
 
     /* camada de REGRAS DE NEGOCIO */
