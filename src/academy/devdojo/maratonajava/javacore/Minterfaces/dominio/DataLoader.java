@@ -13,4 +13,14 @@ public interface DataLoader {
 
     /* a partir da versão 8 do Java existe a possibilidade de colocar metodos concretos
        na interface */
+
+    int MAX_DATA_SIZE = 10;
+
+    /* atributos em inteface são publicos e final(constantes por natureza) */
+
+    static void retrieveMaxDataSize(){
+        System.out.println("Dentro do retrieveMaxDataSize na interface!");
+    }
+
+    /* a partir da versão 8 do Java e permitido criar metodos estaticos*/
 }
