@@ -1,6 +1,6 @@
 package academy.devdojo.maratonajava.javacore.LclassesAbstratas.dominio;
 
-public abstract class Funcionario {
+public abstract class Funcionario extends Pessoa {
 
     protected String nome;
     protected double salario;
@@ -28,6 +28,14 @@ public abstract class Funcionario {
                 '}';
     }
 
-    /* em uma classe abstrata pode ter metodos abstartos e metodos não abstratos,
+    /* em uma classe abstrata pode ter metodos abstartos e metodos não abstratos(concretos),
        metodos abstratos so pode ter em classes abstratas */
+
+
+    // metodo vindo da classe vô (extendida de Pessoa)
+    @Override
+    public void imprime() {
+        System.out.println("Imprimindo...");
+    }
+
 }
