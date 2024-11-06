@@ -24,6 +24,6 @@ public class RuntimeExceptionTest02 {
 
     /* throws indica que exceções podem ser lançadas, isso indica aos desenvolvedores para
        estar preparados para essas exceções caso ocorram, o throw new e usado para instanciar
-       uma nova exceção */
+       ou criar uma nova exceção */
 
 }
