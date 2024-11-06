@@ -22,10 +22,11 @@ public class ExceptionTest01 {
     }
 
     /* ao tratar uma exceção busque tartar de forma expecifica e não generica,
+       a lista de exceções começa de baixo para cima expecificando a linha que ocooreu
        nunca deixar o bloco catch em branco */
 
     /* trabalhando com o Java na hora da compilação ele vai
-       assumir que o caminho passado no arquivo começa no root
+       assumir que o caminho passado no arquivo(File()) começa no root
        do projeto */
 
     /* para abrir a documentação com o cursor em cima apertar Ctrl + B */
