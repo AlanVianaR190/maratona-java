@@ -21,13 +21,13 @@ public class ExceptionTest01 {
 
     }
 
-    /* ao tratar uma exceção busque tartar de forma expecifica e não generica,
-       a lista de exceções começa de baixo para cima expecificando a linha que ocooreu
-       nunca deixar o bloco catch em branco */
+        /* Ao tratar uma exceção, busque sempre tratá-la de forma específica, evitando tratamentos genéricos.
+           No stack trace, a lista de exceções é exibida de baixo para cima, especificando a linha onde ocorreu o erro.
+           Nunca deixe o bloco catch em branco, pois isso dificulta a identificação e resolução de problemas. */
 
-    /* trabalhando com o Java na hora da compilação ele vai
-       assumir que o caminho passado no arquivo(File()) começa no root
-       do projeto */
+        /* Ao usar o método File(), o Java assume que o caminho passado é relativo ao diretório raiz do projeto,
+           a menos que seja fornecido um caminho absoluto. */
 
-    /* para abrir a documentação com o cursor em cima apertar Ctrl + B */
+
+        /* para abrir a documentação com o cursor em cima apertar Ctrl + B */
 }

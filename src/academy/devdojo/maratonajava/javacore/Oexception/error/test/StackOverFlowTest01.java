@@ -4,8 +4,12 @@ public class StackOverFlowTest01 {
     public static void main(String[] args) {
         recursividade();
 
-        /* ErroR é ago que acontece na JVM a solução e arrumar ou melhorar o codigo, erro
-           não é uma exceção, Error e filha da Throwable (lançavel) */
+        /* Error representa um problema grave que ocorre na JVM, geralmente devido a limitações de recursos,
+           e não é considerado uma exceção tratável. Errors são subclasses de Throwable, mas, diferente de Exception,
+           não devem ser manipulados pelo programa, pois indicam problemas críticos que exigem ajustes no código
+           ou uma abordagem diferente. No exemplo, a chamada recursiva infinita gera um StackOverflowError,
+           pois a pilha de chamadas se esgota. */
+
 
     }
 
