@@ -15,9 +15,11 @@ public class ExceptionTest02 {
         try{
             boolean criado = file.createNewFile();
             System.out.println("Arquivo criado: "+criado);
+
         } catch (IOException e){
             e.printStackTrace();
             throw e;
+
         }
     }
 
@@ -27,4 +29,5 @@ public class ExceptionTest02 {
        estar preparado para lidar com a exceção.
 
        Quando um metodo lança uma exceção o metodo principal tambem deve declara-la */
+
 }
