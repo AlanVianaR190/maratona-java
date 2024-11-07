@@ -29,6 +29,7 @@ public class TryWithResourcesTest01 {
        Recurso muito útil para manipulação de arquivos, conexões de banco de dados e
        outros processos que demandam gerenciamento de recursos externos! */
 
+    // Evitar isso!
     public static void lerArquiv2(){
         Reader reader = null;
         try {
