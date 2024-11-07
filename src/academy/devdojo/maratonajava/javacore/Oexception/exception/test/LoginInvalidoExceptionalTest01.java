@@ -2,7 +2,6 @@ package academy.devdojo.maratonajava.javacore.Oexception.exception.test;
 
 import academy.devdojo.maratonajava.javacore.Oexception.exception.dominio.LoginInvalidoExceptional;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class LoginInvalidoExceptionalTest01 {
@@ -13,8 +12,6 @@ public class LoginInvalidoExceptionalTest01 {
         } catch (LoginInvalidoExceptional e) {
             e.printStackTrace();
         }
-
-
     }
 
     private static void logar() throws LoginInvalidoExceptional {
@@ -34,8 +31,6 @@ public class LoginInvalidoExceptionalTest01 {
         }
 
         System.out.println("Usuario Logado com Sucesso");
-
-
 
     }
 
