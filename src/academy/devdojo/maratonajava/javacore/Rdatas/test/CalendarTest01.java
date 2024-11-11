@@ -36,8 +36,10 @@ public class CalendarTest01 {
 
         System.out.println(date);
 
-        /* diferente da classe Date que o metodo .getTime() retorna o valor
-           em milisegundos, na classe Calendar temos como retorno a data e hora atuais */
+        /* Na classe Calendar, o método getTime() retorna um objeto Date que representa
+           a data e hora completas do calendário atual. Isso é diferente do método getTime()
+           da classe Date, que retorna o tempo em milissegundos desde 1º de janeiro de 1970. */
+
 
     }
 }
