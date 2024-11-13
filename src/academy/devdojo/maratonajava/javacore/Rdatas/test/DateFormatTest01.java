@@ -29,5 +29,8 @@ public class DateFormatTest01 {
         for (DateFormat dateFormat: df){
             System.out.println(dateFormat.format(calendar.getTime()));
         }
+
+
+
     }
 }
