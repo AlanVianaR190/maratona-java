@@ -16,7 +16,11 @@ public class LocalDateTest01 {
 
         /* aqui estamos pegando o valor de uma constante da classe Mounth */
 
+        System.out.println("-----------------------");
+
         LocalDate date = LocalDate.of(2024, Month.DECEMBER, 24);
+
+        /* com o metodo .of() e possivel criar uma data */
 
         System.out.println(date.getYear());
         System.out.println(date.getMonth());
@@ -30,9 +34,13 @@ public class LocalDateTest01 {
 
         System.out.println(date);
 
+        System.out.println("-----------");
+
         LocalDate agora = LocalDate.now();
 
-        /* não e possivel usar new com LocalDate porque ela e uma classe imutavel
+        /* utilizando o .now temos a data atual
+
+           não e possivel usar o new com LocalDate porque ela e uma classe imutavel
 
            A classe LocalDate faz parte da API de datas do Java 8 (java.time) e é
            usada para representar uma data sem hora (somente ano, mês e dia). Ela
