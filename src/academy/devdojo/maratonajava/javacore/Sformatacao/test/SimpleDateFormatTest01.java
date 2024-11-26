@@ -1,5 +1,6 @@
 package academy.devdojo.maratonajava.javacore.Sformatacao.test;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -21,5 +22,15 @@ public class SimpleDateFormatTest01 {
 
         /* ao utilizar o new Date() temos a data e hora atual */
 
+        try {
+            sdf.parse("São Paulo 25 de novembro de 2024");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        /* O parse() é um método usado para interpretar dados em forma de texto e
+           transformá-los em tipos mais estruturados ou utilizáveis no programa. Ele
+           é essencial para trabalhar com informações recebidas como texto, como entrada
+           de usuários, arquivos ou respostas de APIs. */
     }
 }
