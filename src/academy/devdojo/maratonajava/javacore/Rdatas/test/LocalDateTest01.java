@@ -16,25 +16,21 @@ public class LocalDateTest01 {
 
         /* aqui estamos pegando o valor de uma constante da classe Mounth */
 
-        System.out.println("-----------------------");
-
         LocalDate date = LocalDate.of(2024, Month.DECEMBER, 24);
 
         /* com o metodo .of() e possivel criar uma data */
 
+        System.out.println(date);
         System.out.println(date.getYear());
         System.out.println(date.getMonth());
         System.out.println(date.getMonthValue());
         System.out.println(date.getDayOfWeek());
         System.out.println(date.getDayOfMonth());
         System.out.println(date.lengthOfMonth());
+
         System.out.println(date.isLeapYear());
 
         /* o metodo .isLeapYear verifica se o ano e bissexto */
-
-        System.out.println(date);
-
-        System.out.println("-----------");
 
         LocalDate agora = LocalDate.now();
 
