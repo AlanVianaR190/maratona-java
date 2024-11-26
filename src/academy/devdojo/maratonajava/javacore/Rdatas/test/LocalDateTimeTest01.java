@@ -16,6 +16,10 @@ public class LocalDateTimeTest01 {
         LocalDate date = LocalDate.parse("2024-12-24");
         LocalTime time = LocalTime.parse("23:59:55");
 
+        /* A classe LocalDateTime em Java é usada para representar uma data
+           e um horário juntos, sem considerar o fuso horário, útil para
+           manipular combinações de datas e horários de forma simples. */
+
         System.out.println(localDateTime);
         System.out.println(date);
         System.out.println(time);
