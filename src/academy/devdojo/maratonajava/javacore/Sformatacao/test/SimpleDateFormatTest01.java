@@ -7,7 +7,7 @@ import java.util.Date;
 public class SimpleDateFormatTest01 {
     public static void main(String[] args) {
 
-        String pattern = "'São Paulo' dd 'de' MMMM 'de' YYYY";
+        String pattern = "'São Paulo' dd 'de' MMMM 'de' yyyy";
 
         /* as aspas simples ira ser ignorada na hora da formatação */
 
@@ -23,7 +23,7 @@ public class SimpleDateFormatTest01 {
         /* ao utilizar o new Date() temos a data e hora atual */
 
         try {
-            sdf.parse("São Paulo 25 de novembro de 2024");
+            System.out.println(sdf.parse("São Paulo 15 de novembro de 2024"));
         } catch (ParseException e) {
             e.printStackTrace();
         }
