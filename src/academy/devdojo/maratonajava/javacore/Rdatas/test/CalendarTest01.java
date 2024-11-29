@@ -40,6 +40,10 @@ public class CalendarTest01 {
            a data e hora completas do calendário atual. Isso é diferente do método getTime()
            da classe Date, que retorna o tempo em milissegundos desde 1º de janeiro de 1970. */
 
+        /* O método Calendar.getInstance() retorna uma instância de GregorianCalendar,
+           configurada com a data e hora atuais do sistema, além de informações regionais,
+           como fuso horário e configurações culturais */
+
 
     }
 }
