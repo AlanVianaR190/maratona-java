@@ -37,7 +37,5 @@ public class LocaleTest01 {
         System.out.println(localeJapan.getDisplayCountry());
 
         /* o metodo .getDisplyCountry mostra o nome do pais instanciado */
-
-
     }
 }
