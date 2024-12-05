@@ -28,6 +28,5 @@ public class LocalTimeTest01 {
         /* MIN & MAX são constantes da classe LocalTime */
 
         System.out.println(timeNow);
-
     }
 }

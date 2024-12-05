@@ -30,6 +30,10 @@ class ObterProximoDiaUtil implements TemporalAdjuster{
     }
 }
 
+/* A interface TemporalAdjuster permite criar lógicas personalizadas para ajustar
+   ou modificar uma data. No caso, o objetivo é calcular o próximo dia útil a partir
+   de uma data fornecida. */
+
 public class TemporalAdjusterTest01 {
     public static void main(String[] args) {
 
@@ -45,5 +49,7 @@ public class TemporalAdjusterTest01 {
         System.out.println(now);
         System.out.println(now.getDayOfWeek());
 
+        /* o metodo .withDayOfMonth() seleciona um dia do mes como o proprio
+           nome ja diz */
     }
 }

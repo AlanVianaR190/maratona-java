@@ -17,6 +17,7 @@ public class TemporalAdjurstersTest01 {
         System.out.println(now);
         System.out.println(now.getDayOfWeek());
 
+        // usando o TemporalAdjusters
         now = LocalDate.now().with(TemporalAdjusters.previous(DayOfWeek.FRIDAY));
 
         /* O metodo .previous pega o ultimo dia da semana anterior à data atual. */
@@ -58,6 +59,5 @@ public class TemporalAdjurstersTest01 {
 
         System.out.println(now);
         System.out.println(now.getDayOfWeek());
-
     }
 }
