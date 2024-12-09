@@ -3,7 +3,7 @@ package academy.devdojo.maratonajava.javacore.Uregex.test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PatterMatcherTest03 {
+public class PatterMatcherTest04 {
     public static void main(String[] args) {
 
         /* metacaracter
@@ -16,23 +16,34 @@ public class PatterMatcherTest03 {
            \W = tudo o que não for incluso no \w */
 
         /* [] = usados para criar classes de caracteres, ou especificar um conjunto de caracteres
+           ? = zero ou uma
+           * = zero ou mais
+           + = uma ou mais
+           {n,m} = de n até m
+           () = agrupamento
 
+           | = para OU: um exemlo seria o(v|c) aqui é usado o pipe dentro do agrupamento para
+           definir ovo OU oco
 
-         */
+           $
+        */
 
-        String regex = "[a-zA-C]";
+        String regex1 = "0[xX]([0-9a-fA-F])+(\\s|$)";
 
-        String regex1 = "0[xX][0-9a-fA-F]";
+        /* A regex 0[xX]([0-9a-fA-F])+(\\s|$) encontra números hexadecimais que:
 
-        String texto1 = "abaaba";
+           Começam com 0x ou 0X
+           São seguidos por um ou mais caracteres válidos em hexadecimal (0-9, a-f, A-F)
+           Terminam com um espaço ou no final do texto.
+        */
 
-        String texto2 = "12 0X 0X 0XFFABC 0X109 0X1";
+        String texto1 = "12 0X 0X 0XFFABC 0X10G 0X1";
 
         Pattern pattern = Pattern.compile(regex1);
 
-        Matcher matcher = pattern.matcher(texto2);
+        Matcher matcher = pattern.matcher(texto1);
 
-        System.out.println("texto:     "+texto2);
+        System.out.println("texto:     "+texto1);
         System.out.println("indice:    0123456789");
         System.out.println("regex "+regex1);
         System.out.println("Posições encontradas");
@@ -40,8 +51,5 @@ public class PatterMatcherTest03 {
         while(matcher.find()){
             System.out.print(matcher.start()+ " "+matcher.group()+"\n");
         }
-
-        // numero hexadecimal
-        //int numeroHex = 0X59F86A;
     }
 }
