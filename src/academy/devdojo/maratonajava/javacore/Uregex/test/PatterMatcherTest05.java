@@ -20,15 +20,15 @@ public class PatterMatcherTest05 {
         /*
            Outros símbolos importantes:
 
-           []       = define classes de caracteres, ou seja, especifica um conjunto permitido de caracteres
-           ?        = zero ou uma ocorrência
-           *        = zero ou mais ocorrências
-           +        = uma ou mais ocorrências
-           {n,m}    = de 'n' até 'm' ocorrências
-           ()       = agrupamento de subexpressões
+           []    = define classes de caracteres, ou seja, especifica um conjunto permitido de caracteres
+           ?     = zero ou uma ocorrência
+           *     = zero ou mais ocorrências
+           +     = uma ou mais ocorrências
+           {n,m} = de 'n' até 'm' ocorrências
+           ()    = agrupamento de subexpressões
+           |     = operador OU. Exemplo: o(v|c) encontra "ovo" ou "oco"
+           $     = indica o fim do texto ou linha (dependendo do modo)
 
-           |        = operador OU. Exemplo: o(v|c) encontra "ovo" ou "oco"
-           $        = indica o fim do texto ou linha (dependendo do modo)
         */
 
         String regex1 = "([a-zA-Z0-9\\._-])+@([a-zA-Z])+(\\.([a-zA-Z])+)+";
