@@ -25,7 +25,7 @@ public class PatterMatcherTest04 {
            | = para OU: um exemlo seria o(v|c) aqui é usado o pipe dentro do agrupamento para
            definir ovo OU oco
 
-           $
+           $ = fim do texto
         */
 
         String regex1 = "0[xX]([0-9a-fA-F])+(\\s|$)";
