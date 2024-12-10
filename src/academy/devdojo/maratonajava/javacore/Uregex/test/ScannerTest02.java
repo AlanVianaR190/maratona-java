@@ -29,7 +29,12 @@ public class ScannerTest02 {
         /* o metodo .hasNext() verifica se há outro token ou palavra disponivel
 
            o metodo .hasNextInt() verifica se o token pode ser interpretado como inteiro, o
-           metodo .nextInt() le o token como inteiro */
+           metodo .nextInt() le o token como inteiro
+
+           o metodo .hasNextBoolean() verifica se o token pode ser interpretado como booleano, o
+           metodo .nextBoolean() le o token como boolean
+
+           o metodod .next() le o token como String */
 
     }
 }
