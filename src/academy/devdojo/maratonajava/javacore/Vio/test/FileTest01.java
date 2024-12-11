@@ -2,6 +2,8 @@ package academy.devdojo.maratonajava.javacore.Vio.test;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FileTest01 {
     public static void main(String[] args) {
@@ -30,7 +32,8 @@ public class FileTest01 {
             System.out.println("Oculto: "+file.isHidden());
 
             // verificar modificação
-
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            System.out.println(sdf.format(new Date(file.lastModified())));
 
             // verificando se existe
             boolean exists = file.exists();
