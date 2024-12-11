@@ -17,10 +17,17 @@ public class FileWriterTest01 {
 
             fileWriter.write("Hello World");
 
+            /* o metodo .write() escreve ou sobreescreve no arquivo */
+
             fileWriter.flush();
 
+            /* O método flush() da classe FileWriter força a escrita de todos os dados armazenados
+               no buffer interno para o arquivo no disco. Em outras palavras, ele garante que tudo
+               o que foi escrito no FileWriter até o momento seja efetivamente gravado no arquivo,
+               evitando perda de dados */
+
             /* sempre que abrir um arquivo no final e necessario fecha-lo,
-               e possivel utilizar o try com recursos como visto acima ou utilizar
+               e possivel utilizar o try with resources (recursos) como visto acima ou utilizar
                o metodo .close() */
 
         } catch (IOException e) {
