@@ -23,8 +23,8 @@ public class FileReaderTest01 {
                 System.out.print(i);
             }
 
-            /* o metodo .read() le um caracter por vez, por isso aqui ele esta sendo usado
-               em um laço */
+            /* o metodo .read() le um caracter por vez, utilizando o valor do espaço
+               alocado em memoria, por isso aqui ele esta sendo usado em um laço */
 
         } catch (IOException e){
             e.printStackTrace();
