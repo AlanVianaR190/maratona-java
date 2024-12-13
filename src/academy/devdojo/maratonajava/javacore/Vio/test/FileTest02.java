@@ -30,6 +30,5 @@ public class FileTest02 {
         boolean isFolderRenamed = diretorio.renameTo(diretorioRenameado);
         System.out.println(isFolderRenamed);
 
-
     }
 }
