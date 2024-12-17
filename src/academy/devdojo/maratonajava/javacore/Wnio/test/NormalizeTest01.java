@@ -21,5 +21,10 @@ public class NormalizeTest01 {
         System.out.println(path2);
         System.out.println(path2.normalize());
 
+        /* No contexto da classe Path em Java, normalização refere-se ao processo
+           de remover elementos redundantes de um caminho de arquivo, a normalização
+           transforma um caminho em sua forma mais direta e simplificada, sem alterar o destino
+           do caminho. */
+
     }
 }
