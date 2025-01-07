@@ -13,8 +13,10 @@ public class BasicFileAttributesTest02 {
 
         Path path = Paths.get("folder_renamed/new1.txt");
 
+        // ler atributos
         BasicFileAttributes basicFileAttributes = Files.readAttributes(path, BasicFileAttributes.class);
 
+        // obtendo atributos
         FileTime creationTime = basicFileAttributes.creationTime();
         FileTime lastModifiedTime = basicFileAttributes.lastModifiedTime();
         FileTime lastAccesTime = basicFileAttributes.lastAccessTime();
@@ -24,10 +26,12 @@ public class BasicFileAttributesTest02 {
         System.out.println("lastAccesTime "+lastAccesTime);
         System.out.println("----------------------------");
 
+        // alterando atributos atraves da View
         BasicFileAttributeView fileAttributeView = Files.getFileAttributeView(path, BasicFileAttributeView.class);
         FileTime newCreationTime = FileTime.fromMillis(System.currentTimeMillis());
         fileAttributeView.setTimes(lastModifiedTime, newCreationTime ,creationTime);
 
+        // leitura dos atributos atualizados
         creationTime = fileAttributeView.readAttributes().creationTime();
         lastModifiedTime = fileAttributeView.readAttributes().lastModifiedTime();
         lastAccesTime = fileAttributeView.readAttributes().lastAccessTime();
