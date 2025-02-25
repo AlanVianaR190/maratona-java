@@ -10,7 +10,7 @@ public class Smartphone {
         this.marca = marca;
     }
 
-    //metodo equals sobrescrito
+    // metodo equals sobrescrito
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false; // verifica se o objeto e nulo
@@ -20,9 +20,34 @@ public class Smartphone {
         return serialNumber != null && serialNumber.equals(smartphone.serialNumber); // compara os serialNumber
     }
 
+    // metodo hash sobrescrito
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0 : this.serialNumber.hashCode();
+    }
+
     public String getSerialNumber() {
         return serialNumber;
     }
+
+    /*
+    O equals é um método usado para comparar dois objetos e verificar se eles são iguais. Por padrão
+    o equals compara as referências de memória dos objetos (ou seja, se são o mesmo objeto na memória). Mas
+    você pode sobrescrever o equals para comparar os atributos dos objetos.
+
+    O hashCode é um método que retorna um número inteiro que representa o objeto. Por padrão
+    o hashCode retorna um número baseado no endereço de memória do objeto. Também
+    pode sobrescrever o hashCode para gerar um número baseado nos atributos do objeto.
+
+    Regra do equals e hashCode:
+    Se dois objetos são iguais (equals retorna true), eles devem ter o mesmo hashCode.
+    Se dois objetos têm o mesmo hashCode, eles não precisam ser iguais (pode haver colisões).
+
+    Resumo:
+    equals: Compara dois objetos para ver se são iguais.
+    hashCode: Gera um número que representa o objeto, usado em coleções.
+    Regra: Se equals retorna true, o hashCode deve ser o mesmo.
+    */
 
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
