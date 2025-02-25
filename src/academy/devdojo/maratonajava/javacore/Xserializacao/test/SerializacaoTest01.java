@@ -15,10 +15,6 @@ public class SerializacaoTest01 {
 
         Aluno aluno = new Aluno(1L, "John", "aluno1234");
 
-        /*
-
-        */
-
         //serializar(aluno);
 
         deserializar();

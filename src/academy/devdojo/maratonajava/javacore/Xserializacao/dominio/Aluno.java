@@ -6,9 +6,9 @@ public class Aluno implements Serializable {
 
     private Long id;
     private String aluno;
-    private String passworld;
+    private transient String password;
 
-    public Aluno(Long id, String aluno, String passworld) {
+    public Aluno(Long id, String aluno, String password) {
         System.out.println("Dentro do construtor.");
 
         /*
@@ -18,7 +18,7 @@ public class Aluno implements Serializable {
 
         this.id = id;
         this.aluno = aluno;
-        this.passworld = passworld;
+        this.password = password;
     }
 
     public Long getId() {
@@ -37,12 +37,12 @@ public class Aluno implements Serializable {
         this.aluno = aluno;
     }
 
-    public String getPassworld() {
-        return passworld;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassworld(String passworld) {
-        this.passworld = passworld;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Aluno implements Serializable {
         return "Aluno{" +
                 "id=" + id +
                 ", aluno='" + aluno + '\'' +
-                ", passworld='" + passworld + '\'' +
+                ", passworld='" + password + '\'' +
                 '}';
     }
 }
