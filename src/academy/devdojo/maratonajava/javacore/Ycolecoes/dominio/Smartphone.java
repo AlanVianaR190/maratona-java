@@ -26,10 +26,6 @@ public class Smartphone {
         return serialNumber == null ? 0 : this.serialNumber.hashCode();
     }
 
-    public String getSerialNumber() {
-        return serialNumber;
-    }
-
     /*
     O equals é um método usado para comparar dois objetos e verificar se eles são iguais. Por padrão
     o equals compara as referências de memória dos objetos (ou seja, se são o mesmo objeto na memória). Mas
@@ -48,6 +44,18 @@ public class Smartphone {
     hashCode: Gera um número que representa o objeto, usado em coleções.
     Regra: Se equals retorna true, o hashCode deve ser o mesmo.
     */
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", marca='" + marca + '\'' +
+                '}';
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
 
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
