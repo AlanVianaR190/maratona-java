@@ -16,6 +16,13 @@ public class ListTest01 {
         /*
         add(E e): Adiciona um elemento ao final da lista.
         add(int index, E e): Adiciona um elemento em uma posição específica.
+
+        remove(int index): Remove o elemento na posição especificada.
+        remove(Object o): Remove a primeira ocorrência do objeto especificado.
+
+        addAll(Collection<? extends E> c): Adiciona todos os elementos de uma coleção à lista.
+        addAll(int index, Collection<? extends E> c): Adiciona todos os elementos da coleção
+        c a partir de uma posição específica (index) na lista.
         */
 
         for (Object nome: nomes){
@@ -62,6 +69,9 @@ public class ListTest01 {
 
         get(int index): Retorna o elemento na posição especificada.
         */
+
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(1);
 
     }
 }
