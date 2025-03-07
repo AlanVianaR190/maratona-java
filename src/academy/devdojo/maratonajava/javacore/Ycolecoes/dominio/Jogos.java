@@ -16,7 +16,10 @@ public class Jogos {
         this.preco = preco;
 
         /*
-
+         Objects.requireNonNull(), o método é usado para:
+        Validar parâmetros: Garantir que um objeto passado como argumento para um método não seja nulo.
+        Melhorar a legibilidade: Substituir verificações manuais de null por uma chamada simples e clara.
+        Lançar exceções personalizadas: Permitir que você forneça uma mensagem de erro personalizada ao lançar a exceção.
         */
 
     }
@@ -33,6 +36,10 @@ public class Jogos {
     public int hashCode() {
         return Objects.hash(id, nome, preco);
     }
+
+    /*
+    Metodo .equls() & .hashCode() criados a partir do alt + insert,
+    */
 
     @Override
     public String toString() {

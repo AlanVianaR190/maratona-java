@@ -24,7 +24,11 @@ public class ListSortTest01 {
         Collections.sort(jogos);
 
         /*
+        A classe Collections em Java faz parte do framework Java Collections Framework e é uma
+        classe utilitária que fornece métodos estáticos para operações comuns em coleções, como listas, conjuntos e mapas.
 
+        O método .sort() é usado para ordenar os elementos de uma lista. Para String a ordem é alfabética.Para
+        Integer a ordem é numérica crescente.
         */
 
         for(String jogo: jogos){
