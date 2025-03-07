@@ -3,7 +3,7 @@ package academy.devdojo.maratonajava.javacore.Ycolecoes.dominio;
 import java.util.Collections;
 import java.util.Objects;
 
-public class Game {
+public class Game implements Comparable<Game> {
 
     private Long id;
     private String nome;
@@ -72,5 +72,25 @@ public class Game {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public int compareTo(Game outroGame) {
+
+        // negativo se o this. < outroGame
+        // se this == outroGame return 0
+        // positivo se this > outroGame
+
+        /* if (this.id < outroGame.getId()){
+            return -1;
+        } else if (this.id.equals(outroGame.getId())){
+            return 0;
+        } else {
+            return 1;
+        } */
+
+        /* todo este codigo pode ser redusido para este, isto por que os wrappers
+           contem o metodo compareTo */
+        return this.id.compareTo(outroGame.getId());
     }
 }
