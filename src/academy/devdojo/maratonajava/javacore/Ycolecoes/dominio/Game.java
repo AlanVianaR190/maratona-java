@@ -5,6 +5,14 @@ import java.util.Objects;
 
 public class Game implements Comparable<Game> {
 
+    /*
+    A interface Comparable é usada para definir a ordem natural de uma classe, ela permite
+    que objetos de uma classe sejam comparados entre si com base em um critério específico.
+
+    Use Comparable quando a classe tiver uma ordem natural clara e única, se você tem uma
+    classe e quer que sejam ordenados por ID ou nome por padrão.
+    */
+
     private Long id;
     private String nome;
     private double preco;
@@ -89,8 +97,13 @@ public class Game implements Comparable<Game> {
             return 1;
         } */
 
-        /* todo este codigo pode ser redusido para este, isto por que os wrappers
-           contem o metodo compareTo */
+        /* todo este codigo pode ser redusido para este, isto por que os wrapper
+            contem o metodo compareTo */
+
         return this.id.compareTo(outroGame.getId());
+
+        // return this.nome.compareTo(outroGame.getNome());
+        // return Double.compare(preco, outroGame.getPreco());
+        // return Double.valueOf(preco).compareTo(outroGame.getPreco());
     }
 }
