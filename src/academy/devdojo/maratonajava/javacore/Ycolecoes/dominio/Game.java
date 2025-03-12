@@ -16,6 +16,7 @@ public class Game implements Comparable<Game> {
     private Long id;
     private String nome;
     private double preco;
+    private int quantidade;
 
     public Game(Long id, String nome, double preco) {
         Objects.requireNonNull(id);
@@ -30,6 +31,11 @@ public class Game implements Comparable<Game> {
         Melhorar a legibilidade: Substituir verificações manuais de null por uma chamada simples e clara.
         Lançar exceções personalizadas: Permitir que você forneça uma mensagem de erro personalizada ao lançar a exceção.
         */
+    }
+
+    public Game(Long id, String nome, double preco, int quantidade) {
+        this(id, nome, preco);
+        this.quantidade = quantidade;
     }
 
     @Override
@@ -55,6 +61,7 @@ public class Game implements Comparable<Game> {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
+                ", quantidade=" + quantidade +
                 '}';
     }
 
@@ -80,6 +87,14 @@ public class Game implements Comparable<Game> {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     @Override
