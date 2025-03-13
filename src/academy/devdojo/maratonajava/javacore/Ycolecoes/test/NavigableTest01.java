@@ -15,6 +15,14 @@ class SmartphoneMarcaComparator implements Comparator<Smartphone> {
     }
 }
 
+class GamePrecoComparator implements Comparator<Game> {
+
+    @Override
+    public int compare(Game o1, Game o2) {
+        return Double.compare(o1.getPreco(), o2.getPreco());
+    }
+}
+
 public class NavigableTest01 {
     public static void main(String[] args) {
 
@@ -26,7 +34,7 @@ public class NavigableTest01 {
 
         System.out.println(set);
 
-        NavigableSet<Game> jogos = new TreeSet<>();
+        NavigableSet<Game> jogos = new TreeSet<>(new GamePrecoComparator());
 
         jogos.add(new Game(2L, "Red Dead Redemption", 59.90, 2));
         jogos.add(new Game(4L, "Metal Gear", 19.90, 8));
@@ -37,6 +45,7 @@ public class NavigableTest01 {
         for (Game jogo: jogos){
             System.out.println(jogo);
         }
+        System.out.println("------------");
 
         /*
         NavigableSet é uma interface que fornece métodos para navegar em uma coleção ordenada.
@@ -44,5 +53,38 @@ public class NavigableTest01 {
         TreeSet é uma implementação de NavigableSet que armazena elementos em uma árvore
         balanceada, garantindo ordenação e operações eficientes.
         */
+
+        /*
+        for (Game jogo: jogos.descendingSet()){
+            System.out.println(jogo);
+        }
+        System.out.println("------------");
+
+        O método descendingSet() retorna uma visão reversa de um conjunto ordenado, permitindo
+        que você acesse os elementos em ordem decrescente.
+
+        */
+
+        Game mario = new Game(7L, "Super Mario", 59.90, 30);
+
+        System.out.println(jogos.lower(mario));
+        System.out.println(jogos.floor(mario));
+        System.out.println(jogos.higher(mario));
+        System.out.println(jogos.ceiling(mario));
+
+        System.out.println(jogos.size());
+        System.out.println(jogos.pollLast());
+        System.out.println(jogos.size());
+
+        /*
+        .lower() - Retorna o maior elemento no conjunto que é estritamente menor que o elemento especificado
+        .floor() - Retorna o maior elemento no conjunto que é menor ou igual ao elemento especificado
+        .higher() - Retorna o menor elemento no conjunto que é estritamente maior que o elemento especificado
+        .ceiling() - Retorna o menor elemento no conjunto que é maior ou igual ao elemento especificado
+        .size() - Retorna o número de elementos no conjunto.
+        .pollLast() - Remove e retorna o último elemento do conjunto (o maior elemento).
+        .size() & .pollLast() - Retorna o novo número de elementos no conjunto após a remoção do último elemento.
+        */
+
     }
 }
