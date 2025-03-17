@@ -23,7 +23,7 @@ class GamePrecoComparator implements Comparator<Game> {
     }
 }
 
-public class NavigableTest01 {
+public class NavigableSetTest01 {
     public static void main(String[] args) {
 
         NavigableSet<Smartphone> set = new TreeSet<>(new SmartphoneMarcaComparator());
