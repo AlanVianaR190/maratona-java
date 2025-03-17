@@ -53,9 +53,16 @@ public class MapTest01 {
         chaves, os valores podem ser duplicados.
         */
 
-        //
+        // melhor metodo para utilizar
         for (Map.Entry<String, String> entry: map.entrySet()){
             System.out.println(entry.getKey() + " - " + entry.getValue());
         }
+
+        /*
+        Map.Entry: Representa um par chave-valor.
+        map.entrySet(): Retorna um Set de pares chave-valor.
+        entry.getKey(): Retorna a chave.
+        entry.getValue(): Retorna o valor.
+        */
     }
 }

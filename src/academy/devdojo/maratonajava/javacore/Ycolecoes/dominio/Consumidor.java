@@ -33,4 +33,8 @@ public class Consumidor {
                 ", nome='" + nome + '\'' +
                 '}';
     }
+
+    public String getNome() {
+        return nome;
+    }
 }
